@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J A P & Associates Chartered Accountants</title>
+
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">J A P & Associates</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#careers">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+<section id="home" class="home-section">
+    <div class="home-content">
+        <h1 class="fade-in">Welcome to J A P & Associates</h1>
+        <p class="slide-in">Your Trusted Chartered Accountants Firm</p>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+<section id="about" class="about-section">
+    <h2>About Us</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>
+                J A P & Associates is a leading Chartered Accountants firm based in Pune, offering a comprehensive range of financial and accounting services tailored to meet the diverse needs of our clients. With a legacy of excellence, we are dedicated to helping businesses, entrepreneurs, and individuals achieve their financial goals with clarity and confidence.
+            </p>
+            <p>
+                Our team of seasoned professionals specializes in Direct Tax, Indirect Tax, Auditing, Business Advisory, and more. We bring in-depth industry knowledge, innovative solutions, and a commitment to delivering exceptional service. Whether you’re looking to optimize tax strategies, ensure compliance, or enhance financial performance, J A P & Associates is your trusted partner.
+            </p>
+            <p>
+                At the core of our philosophy lies professionalism, dedication, and a focus on building long-term relationships with our clients. Join hands with us to navigate the complexities of today’s financial landscape and unlock your full potential.
+            </p>
+            <ul class="about-highlights">
+                <li>Over 5 years of industry experience.</li>
+                <li>Trusted by 100+ clients across industries.</li>
+                <li>Comprehensive solutions tailored to your needs.</li>
+            </ul>
+            <button class="cta-button" onclick="location.href='#contact'">Contact Us</button>
+        </div>
+        <div class="about-image">
+            <img src="About us.png" alt="About Us - J A P & Associates">
+        </div>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+<section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="service-box-container">
+        <div class="service-box audit" data-service-id="audit" onclick="redirectToDetails('audit')">
+            <div class="service-icon">📊</div>
+            <h3>Audit & Assurance</h3>
+            <p>Includes statutory audit, tax audit, internal audit, and more.</p>
+        </div>
+        <div class="service-box direct-taxes" data-service-id="direct-taxes" onclick="redirectToDetails('direct-taxes')">
+            <div class="service-icon">💼</div>
+            <h3>Direct Taxes</h3>
+            <p>Filing of returns, tax audits, appeals, and compliance.</p>
+        </div>
+        <div class="service-box indirect-taxes" data-service-id="indirect-taxes" onclick="redirectToDetails('indirect-taxes')">
+            <div class="service-icon">🔄</div>
+            <h3>Indirect Tax</h3>
+            <p>GST migration, compliance, audits, and VAT-related services.</p>
+        </div>
+        <div class="service-box advisory" data-service-id="advisory" onclick="redirectToDetails('advisory')">
+            <div class="service-icon">💡</div>
+            <h3>Advisory Services</h3>
+            <p>Business plans, project reports, and consultation on taxes.</p>
+        </div>
+        <div class="service-box book-keeping" data-service-id="book-keeping" onclick="redirectToDetails('book-keeping')">
+            <div class="service-icon">📚</div>
+            <h3>Book Keeping</h3>
+            <p>Outsourcing services for accounting and MIS reports.</p>
+        </div>
+        <div class="service-box virtual-office" data-service-id="virtual-office" onclick="redirectToDetails('virtual-office')">
+            <div class="service-icon">🏢</div>
+            <h3>Virtual Office</h3>
+            <p>Office infrastructure and HR services for SMEs.</p>
+        </div>
+    </div>
+</section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>Client Testimonials</h2>
+        <div class="testimonial-box-container">
+            <div class="testimonial-box">
+                <p>"J A P & Associates provided excellent tax advisory services and helped us save on taxes while ensuring compliance. Highly recommended!"</p>
+                <p><strong>- Client Name, Business Name</strong></p>
+            </div>
+            <div class="testimonial-box">
+                <p>"Their auditing services were comprehensive and accurate. We are very satisfied with their professionalism."</p>
+                <p><strong>- Client Name, Company Name</strong></p>
+            </div>
+            <!-- Add more testimonials here -->
+        </div>
+    </section>
+    
+
+   <!-- Blog Section -->
+   <section id="blog" class="blog-section">
+    <h2>Latest Articles</h2>
+    <div class="blog-posts">
+        <!-- Blog Post 1: GST Impact -->
+        <div class="blog-post">
+            <img src="gstsmall-1.png" alt="GST Impacting Small Businesses">
+            <div class="blog-content">
+                <h3>How GST is Impacting Small Businesses</h3>
+                <p>A detailed analysis of the GST framework and how small businesses can benefit...</p>
+                <a href="https://www.captainbiz.com/blogs/gst-everything-you-need-to-know-for-small-business/" class="read-more">Read more</a>
+            </div>
+        </div>
+        
+        <!-- Blog Post 2: Income Tax Audits -->
+        <div class="blog-post">
+            <img src="th.png" alt="Income Tax Audits">
+            <div class="blog-content">
+                <h3>What You Need to Know About Income Tax Audits</h3>
+                <p>Income tax audits can be complex, but understanding the basics can help...</p>
+                <a href="https://www.taxaudit.com/tax-audit-blog" class="read-more">Read more</a>
+            </div>
+        </div>
+        
+        <!-- Blog Post 3: Tax Planning for Small Businesses -->
+        <div class="blog-post">
+            <img src="Tax planning.png" alt="Tax Planning for Small Businesses">
+            <div class="blog-content">
+                <h3>Tax Planning Strategies for Small Businesses</h3>
+                <p>Explore effective tax planning strategies that can help small businesses minimize tax liabilities...</p>
+                <a href="https://www.taxplanning.com/small-business-strategies" class="read-more">Read more</a>
+            </div>
+        </div>
+        
+        <!-- Blog Post 4: CA Role in Financial Compliance -->
+        <div class="blog-post">
+            <img src="blog 4.png" alt="Role of CAs in Financial Compliance">
+            <div class="blog-content">
+                <h3>The Role of CAs in Financial Compliance</h3>
+                <p>Learn about the essential role Chartered Accountants play in ensuring businesses stay compliant with financial regulations...</p>
+                <a href="https://www.financialcompliance.com/ca-role" class="read-more">Read more</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 5: Corporate Taxation Overview -->
+        <div class="blog-post">
+            <img src="corporate taxation.png" alt="Corporate Taxation Overview">
+            <div class="blog-content">
+                <h3>Understanding Corporate Taxation</h3>
+                <p>Gain insights into corporate taxation and how businesses can optimize their tax liabilities through proper planning...</p>
+                <a href="https://www.corporatetaxation.com/overview" class="read-more">Read more</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 6: Financial Statements and Reporting -->
+        <div class="blog-post">
+            <img src="financial.png" alt="Financial Statements and Reporting">
+            <div class="blog-content">
+                <h3>Understanding Financial Statements and Reporting</h3>
+                <p>Learn about the key financial statements every business should understand, and why accurate reporting is crucial...</p>
+                <a href="https://www.financialreporting.com/statements" class="read-more">Read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Resources Section -->
+<section id="resources" class="resources-section">
+    <h2>Free Resources</h2>
+    <div class="resources-grid">
+        <div class="resource-item">
+            <img src="incometax calculator.png" alt="Income Tax Calculator">
+            <a href="https://www.example.com/income-tax-calculator" target="_blank">Income Tax Calculator</a>
+        </div>
+        <div class="resource-item">
+            <img src="Financial Planning.png" alt="Financial Planning Guide">
+            <a href="https://www.example.com/financial-planning-guide" target="_blank">Guide to Financial Planning</a>
+        </div>
+        <div class="resource-item">
+            <img src="FAQ.png" alt="FAQ">
+            <a href="https://www.example.com/common-tax-filing-questions" target="_blank">Common Tax Filing Questions</a>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+<section id="faq" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <h3>What services do you offer?</h3>
+            <p>We offer a wide range of services including tax advisory, auditing, financial planning, and more.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I schedule a consultation?</h3>
+            <p>You can contact us via email or phone to schedule a free initial consultation.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer online consultations?</h3>
+            <p>Yes, we offer online consultations for clients who cannot visit our office.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- News Section -->
+<section id="news" class="news-section">
+    <h2>News & Updates</h2>
+    <div class="news-cards-container">
+        <div class="news-card">
+            <img src="incometax news (1).png" alt="New Income Tax Laws for 2025">
+            <div class="news-card-content">
+                <<h3>New Income Tax Laws for 2025</h3>
+                <p>The government has introduced several new tax provisions starting this year. Learn more...</p>
+                <a href="https://www.incometaxindia.gov.in/pages/tax-information-services.aspx" class="read-more" target="_blank">Read more</a>                
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="GST REG.png" alt="GST Registration Now Available Online">
+            <div class="news-card-content">
+                <h3>GST Registration Now Available Online</h3>
+                <p>The process for GST registration has been simplified. Here’s how to get started...</p>
+                <a href="https://www.gst.gov.in/registration" class="read-more" target="_blank">Read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team-section">
+    <h2 class="section-title">Our Team</h2>
+    <div class="team-container">
+        <div class="team-member" onclick="showDetails('ankush')">
+            <div class="team-member-card">
+                <img src="Jugal_Patil.jpeg" alt="CA Ankush M. Patil" class="team-member-img">
+                <h3>CA Ankush M. Patil</h3>
+                <p>FCA, M. Com</p>
+            </div>
+        </div>
+        <div class="team-member" onclick="showDetails('pratiksha')">
+            <div class="team-member-card">
+                <img src="Jugal_Patil.jpeg" alt="CA Pratiksha P. Patni" class="team-member-img">
+                <h3>CA Pratiksha P. Patni</h3>
+                <p>FCA, B. Com</p>
+            </div>
+        </div>
+        <div class="team-member" onclick="showDetails('jugal')">
+            <div class="team-member-card">
+                <img src="Jugal_Patil.jpeg" alt="CA Jugal P. Patil" class="team-member-img">
+                <h3>CA Jugal P. Patil</h3>
+                <p>ACA, B. Com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for displaying more details about each team member -->
+<div id="team-details-modal" class="team-details-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeDetails()">&times;</span>
+        <div id="team-member-details"></div>
+    </div>
+</div>
+
+<!-- General Modal for other purposes -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-details"></div>
+    </div>
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="contact-title">Contact Us</h2>
+        <p class="company-name"><strong>J A P & Associates, Chartered Accountants</strong></p>
+
+        <div class="contact-info">
+            <div class="address">
+                <i class="fas fa-location-arrow"></i>
+                <p><strong>Address:</strong> 205, City Mall, Near E-Square Mall, University Road, Pune, 411007</p>
+            </div>
+            <div class="email">
+                <i class="fas fa-envelope-open-text"></i>
+                <p><strong>Email:</strong> <a href="mailto:japandassociates@gmail.com" class="email-link">japandassociates@gmail.com</a></p>
+            </div>
+        </div>
+
+        <p class="phone-title"><strong>Phone:</strong></p>
+        <div class="phone-buttons">
+            <div class="phone-button">
+                <span class="person-name">ANKUSH M PATIL</span> - 
+                <a href="tel:+919764495436" class="phone-link">+91 9764495436</a>
+            </div>
+            <div class="phone-button">
+                <span class="person-name">PRTIKSHA P PATNI</span> - 
+                <a href="tel:+917276780926" class="phone-link">+91 7276780926</a>
+            </div>
+            <div class="phone-button">
+                <span class="person-name">JUGAL P PATIL</span> - 
+                <a href="tel:+917588937518" class="phone-link">+91 7588937518</a>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=73.8109%2C18.5294%2C73.8180%2C18.5315&layer=mapnik&marker=18.5305%2C73.8155" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Careers Section -->
+<section id="careers" class="careers-section">
+    <div class="container">
+        <h2>Careers at J A P & Associates</h2>
+        <p>We are always on the lookout for talented professionals to join our team. Check out our current job openings:</p>
+
+        <div class="job-list">
+            <div class="job-item">
+                <h3>Accountant</h3>
+                <p>Join our team to work with a dynamic group of professionals in providing financial solutions to our clients.</p>
+                <a href="careers/accountant.html" class="apply-now-btn">View Details</a>
+                <a href="mailto:careers@japassociates.com?subject=Accountant Application" class="apply-now-btn">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h3>Auditor</h3>
+                <p>We are seeking an experienced auditor to ensure that financial records are accurate and compliant with regulations.</p>
+                <a href="careers/auditor.html" class="apply-now-btn">View Details</a>
+                <a href="mailto:careers@japassociates.com?subject=Auditor Application" class="apply-now-btn">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h3>Tax Consultant</h3>
+                <p>If you have expertise in tax laws and can provide valuable insights to businesses and individuals, this is your role.</p>
+                <a href="careers/tax-consultant.html" class="apply-now-btn">View Details</a>
+                <a href="mailto:careers@japassociates.com?subject=Tax Consultant Application" class="apply-now-btn">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- Job Application Form with Animation -->
+        <div class="job-application-form">
+            <h3>Apply Directly</h3>
+            <form action="submit_application.php" method="POST" enctype="multipart/form-data" class="animated-form">
+                <label for="full-name">Full Name:</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
+                </div>
+
+                <label for="email">Email Address:</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <label for="resume">Upload Resume (PDF):</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-file-upload"></i>
+                    <input type="file" id="resume" name="resume" accept="application/pdf" required>
+                </div>
+
+                <label for="cover-letter">Cover Letter:</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-pencil-alt"></i>
+                    <textarea id="cover-letter" name="cover-letter" rows="4" required placeholder="Write your cover letter"></textarea>
+                </div>
+
+                <button type="submit" class="apply-now-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</section>
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" style="display: none;">⬆ Back to Top</button>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 J A P & Associates Chartered Accountants. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link JavaScript Files -->
+    <script src="script.js"></script>
+    <script src="team-details.js"></script>
+    <script src="details.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

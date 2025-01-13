@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Service details page showcasing J A P & Associates services.">
+    <meta name="keywords" content="services, associates, business, consulting, J A P & Associates">
+    <meta property="og:title" content="Service Details - J A P & Associates">
+    <meta property="og:description" content="Detailed service information on J A P & Associates offerings.">
+    <meta property="og:image" content="thumbnail.jpg">
+    <meta property="og:url" content="https://example.com/service-details">
+    <title>Service Details</title>
+    
+    <!-- External Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            background-color: #0078D7;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            background: none;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            color: #ffd700; /* Gold color on hover */
+            transform: scale(1.1); /* Slightly enlarge the button */
+        }
+
+        .service-details-section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        #service-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #0078D7;
+        }
+
+        #service-content {
+            font-size: 18px;
+            line-height: 1.6;
+            padding: 20px;
+            border: 2px solid #0078D7;
+            border-radius: 8px;
+            background-color: #f9fbfd;
+        }
+
+        #service-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #service-content ul li {
+            position: relative;
+            padding: 10px 0;
+            padding-left: 30px;
+        }
+
+        #service-content ul li:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #0078D7;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #eaeaea;
+        }
+
+        body.dark-mode .navbar {
+            background-color: #1f1f1f;
+        }
+
+        body.dark-mode .service-details-section {
+            background-color: #2d2d2d;
+            color: #eaeaea;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        body.dark-mode #service-title {
+            color: #80c7ff;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">J A P & Associates</a></div>
+            <button class="theme-toggle" onclick="toggleDarkMode()" id="theme-toggle-button">
+                <i class="fas fa-moon" id="theme-icon"></i> Toggle Dark Mode
+            </button>
+        </nav>
+    </header>
+    
+    <section class="service-details-section">
+        <h1 id="service-title"></h1>
+        <div id="service-content"></div>
+        <button onclick="history.back()">← Back to Services</button>
+    </section>
+
+    <script src="details.js"></script>
+    <script>
+        // Dark Mode Toggle Function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const themeIcon = document.getElementById("theme-icon");
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        // Get service ID from the URL
+        const params = new URLSearchParams(window.location.search);
+        const serviceId = params.get("service");
+
+        // Render service details
+        if (serviceId && serviceDetails[serviceId]) {
+            const service = serviceDetails[serviceId];
+            document.getElementById("service-title").textContent = service.title;
+            document.getElementById("service-content").innerHTML = service.content;
+        } else {
+            document.getElementById("service-title").textContent = "Service Not Found";
+            document.getElementById("service-content").textContent = "The requested service does not exist.";
+        }
+    </script>
+</body>
+</html>
